@@ -25,5 +25,6 @@ if (!isNaN(km) && !isNaN(età)) {
     } else if (prezzo) {
         price.innerHTML = "Il costo del biglietto è " + prezzo.toFixed(2) ;
     }
-}
+} else alert("Non hai inserito dei numeri!");
+
 
