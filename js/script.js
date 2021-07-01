@@ -8,15 +8,12 @@ var price = document.getElementById("prezzo")
 var km = prompt("Quanti km vuoi percorrere?");
 var età = prompt("Quanti anni hai?")
 var prezzo = km * 0.21;
-console.log(prezzo)
 if (!isNaN(km) && !isNaN(età)) {
     if (età < 18) {
         var minori = prezzo - ((prezzo / 100) * 20);
-        console.log(minori)
     }
     if (età > 65) {
         var over = prezzo - ((prezzo / 100) * 40);
-        console.log(over)
     }
     if (minori) {
         price.innerHTML = "Il costo del biglietto è " + minori.toFixed(2) ;
