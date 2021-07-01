@@ -17,4 +17,4 @@ if (età >= 65) {
     var over = (prezzo / 30) * 100;
     console.log(over)
 }
-price.innerHTML = "Il costo del biglietto è " + minori || over || prezzo
+price.innerHTML = "Il costo del biglietto è " + minori.toFixed(2) || over.toFixed(2) || prezzo.toFixed(2)
