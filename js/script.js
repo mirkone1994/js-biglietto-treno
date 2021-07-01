@@ -9,18 +9,21 @@ var km = prompt("Quanti km vuoi percorrere?");
 var età = prompt("Quanti anni hai?")
 var prezzo = km * 0.21;
 console.log(prezzo)
-if (età <= 18) {
-    var minori = (prezzo / 20) * 100;
-    console.log(minori)
+if (!isNaN(km) && !isNaN(età)) {
+    if (età <= 18) {
+        var minori = (prezzo / 20) * 100;
+        console.log(minori)
+    }
+    if (età >= 65) {
+        var over = (prezzo / 30) * 100;
+        console.log(over)
+    }
+    if (minori) {
+        price.innerHTML = "Il costo del biglietto è " + minori.toFixed(2) ;
+    } else if (over) {
+        price.innerHTML = "Il costo del biglietto è " + over.toFixed(2) ;
+    } else if (prezzo) {
+        price.innerHTML = "Il costo del biglietto è " + prezzo.toFixed(2) ;
+    }
 }
-if (età >= 65) {
-    var over = (prezzo / 30) * 100;
-    console.log(over)
-}
-if (minori) {
-    price.innerHTML = "Il costo del biglietto è " + minori.toFixed(2) ;
-} else if (over) {
-    price.innerHTML = "Il costo del biglietto è " + over.toFixed(2) ;
-} else if (prezzo) {
-    price.innerHTML = "Il costo del biglietto è " + prezzo.toFixed(2) ;
-}
+
